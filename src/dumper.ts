@@ -52,8 +52,6 @@ class ESOut {
                 throw e;
             }
         }
-        this.cli.search();
-        //await this.cli.indices.putSettings({index: this.index, body: this.indexSetting, preserve_existing: false})
     }
 
     async dump(docs: any[]) {
