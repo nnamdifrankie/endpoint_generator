@@ -1,0 +1,62 @@
+{
+  "name": "endpoint_generator",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@git.endgames.local:ckim/endpoint_generator.git",
+  "author": "Chan Kim <ckim@endgame.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --downlevelIteration",
+    "start": "node bin/doc_gen",
+    "test": "jest --verbose"
+  },
+  "bin": {
+    "endpoint_generator": "bin/endpoint_generator.js"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.4.0",
+    "@types/js-yaml": "^3.12.1",
+    "@types/uuid": "^3.4.6",
+    "@types/yargs": "^13.0.3",
+    "js-yaml": "^3.13.1",
+    "ora": "^4.0.2",
+    "uuid": "^3.3.3",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.5",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.(ts|js|tsx|jsx)",
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
+    "testEnvironment": "node",
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/*.json",
+      "<rootDir>/stories/",
+      "<rootDir>/mocks/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/*.json",
+      "<rootDir>/stories/"
+    ]
+  }
+}

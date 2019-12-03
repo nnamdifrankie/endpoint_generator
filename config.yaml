@@ -1,0 +1,10 @@
+esConfig:
+  node: http://localhost:9200
+  auth:
+    username: elastic
+    password: changeme
+  ssl:
+    rejectUnauthorized: false
+
+index:  endpoint
+indexTemplatePath: ./index_template.json
